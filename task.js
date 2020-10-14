@@ -27,10 +27,16 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
         totalAmount = amountSumm.toFixed(2); 
     } 
     
-     return totalAmount;
+     return parseFloat(totalAmount);
 }
 
 function getGreeting(name) {
-    // код для задачи №2 писать здесь
-    // return greeting;
+    let greeting;
+    if (name === "" || typeof name === "undefined" || name === null ) {
+        greeting = `Привет, мир! Меня зовут Аноним`;
+    } else {
+        greeting = `Привет, мир! Меня зовут ${name}`;
+    }
+    
+    return greeting;
 }
